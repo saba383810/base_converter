@@ -1,19 +1,22 @@
 #!/usr/bin/env python3 kadai6.py
 # kadai6.py : M進数の数字をN進数の数字に変換するプログラム。
 
-#M進数とをうけとってN真数で変えす関数
+#M進数とをうけとってN進数で変えす関数
 def  base_cvt(values,m_num,n_num):
+    code = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9","A", "B", "C", "D", "E", "F"]
     ans = []
     # M進数を10進数に変換
     Decimal_num = int(values,base=m_num)
-    # Nおw10進数に変換
+    # Nを10進数に変換
     N_Decimal = int(n_num,base=10)
     while Decimal_num > 0: 
         rem = Decimal_num % N_Decimal
         Decimal_num = Decimal_num//N_Decimal
+        rem = code[rem]
         ans.append(rem)
-        ans.reverse()
-    ans = int("".join(map(str, ans)))
+    ans.reverse()
+    print(ans)
+    ans = "".join(map(str, ans))
     return ans
 #inputします。
 print("M進数の数字(2<=M<=16)を、N進数の数字(1<=N<=16)に変換します")

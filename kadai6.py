@@ -1,4 +1,4 @@
-#!/usr/bin/env python3 kadai6.py
+#!/usr/local/bin/python3 kadai6.py
 # kadai6.py : M進数の数字をN進数の数字に変換するプログラム。
 
 #M進数とをうけとってN進数で返す関数
@@ -19,7 +19,7 @@ def  radixConv(fnum,frdx,trdx):
     ans = "".join(map(str, ans))
     return ans
 #inputします。
-print("M進数の数字(2<=M<=16)を、N進数の数字(1<=N<=16)に変換します")
+print("\nM進数の数字(2<=M<=16)を、N進数の数字(1<=N<=16)に変換します")
 M = int(input("\n変換元の基数(M(2<=M<=16))を入力してください。 >>"))
 get_num = input("\n変換元の数字を入力してください。 >>")
 N = input("\n変換後(N(1<=N<=16))の基数を入力してください。 >>")
